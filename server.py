@@ -9,12 +9,12 @@ def report():
     return ""
 
 
-@app.route("/firmware", methods=["get"])
+@app.route("/firmware", methods=["GET"])
 def determine_firmware():
     return redirect("firmware/fwuppoc.fw")
 
 
-@app.route("/firmware/<path:filename>", methods=["get"])
+@app.route("/firmware/<path:filename>", methods=["GET"])
 def serve_fw(filename):
     return send_from_directory("firmwares/", filename, as_attachment=True)
 
