@@ -1,0 +1,2 @@
+serve:
+	python server.py
